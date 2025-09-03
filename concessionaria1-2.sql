@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:8889
--- Tempo de geração: 02/09/2025 às 22:26
+-- Tempo de geração: 03/09/2025 às 13:32
 -- Versão do servidor: 8.0.40
 -- Versão do PHP: 8.3.14
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Banco de dados: `concessionaria`
+-- Banco de dados: `concessionaria1`
 --
 
 -- --------------------------------------------------------
@@ -40,9 +40,8 @@ CREATE TABLE `automoveis` (
 --
 
 INSERT INTO `automoveis` (`codigo`, `nome`, `placa`, `chassi`, `montadora`) VALUES
-(1, 'palio', 'fck9920', '12837128', 3),
-(2, 'golf', 'jro9j241', '78478e8', 1),
-(3, 'prisma', 'ifu2839', 'hd8f823r', 4);
+(1, 'golf', 'GEW2218', '84719324878743', 1),
+(2, 'prisma', 'klp0400', '93847237424', 4);
 
 -- --------------------------------------------------------
 
@@ -73,15 +72,6 @@ INSERT INTO `montadoras` (`codigo`, `nome`) VALUES
 -- Índices de tabela `automoveis`
 --
 ALTER TABLE `automoveis`
-  ADD PRIMARY KEY (`codigo`),
-  ADD UNIQUE KEY `placa` (`placa`),
-  ADD UNIQUE KEY `chassi` (`chassi`),
-  ADD KEY `montadora` (`montadora`);
-
---
--- Índices de tabela `montadoras`
---
-ALTER TABLE `montadoras`
   ADD PRIMARY KEY (`codigo`);
 
 --
@@ -92,23 +82,7 @@ ALTER TABLE `montadoras`
 -- AUTO_INCREMENT de tabela `automoveis`
 --
 ALTER TABLE `automoveis`
-  MODIFY `codigo` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
---
--- AUTO_INCREMENT de tabela `montadoras`
---
-ALTER TABLE `montadoras`
-  MODIFY `codigo` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-
---
--- Restrições para tabelas despejadas
---
-
---
--- Restrições para tabelas `automoveis`
---
-ALTER TABLE `automoveis`
-  ADD CONSTRAINT `automoveis_ibfk_1` FOREIGN KEY (`montadora`) REFERENCES `montadoras` (`codigo`);
+  MODIFY `codigo` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
