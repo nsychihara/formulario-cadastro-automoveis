@@ -51,8 +51,8 @@ $result = $stmt->get_result();
                 <table class="table table-striped table-bordered align-middle">
                     <thead class="table-dark">
                         <tr>
-                            <th>Código</th>
-                            <th>Nome</th>
+                            <th>Coude</th>
+                            <th>Name</th>
                             <th>Placa</th>
                             <th>Chassi</th>
                             <th>Montadora</th>
