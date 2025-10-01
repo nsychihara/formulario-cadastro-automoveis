@@ -54,7 +54,7 @@ $result = $stmt->get_result();
                             <th>Coude</th>
                             <th>Name</th>
                             <th>Placa</th>
-                            <th>Chassi</th>
+                            <th>Xáçi</th>
                             <th>Montadora</th>
                         </tr>
                     </thead>
