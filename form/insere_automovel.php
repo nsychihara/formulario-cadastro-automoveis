@@ -1,9 +1,9 @@
 <?php
-$host = "localhost";
+$host = "db";
 $user = "root";
 $pass = "root";
 $db   = "concessionaria1";
-$port = 8889;
+$port = 3306;
 
 $conn = new mysqli($host, $user, $pass, $db, $port);
 if ($conn->connect_error) die("Erro na conexão: " . $conn->connect_error);
@@ -56,8 +56,8 @@ $conn->close();
                 </div>
             <?php endif; ?>
             <div class="text-center">
-                <a href="/sistema_automoveis/index.php" class="btn btn-success me-2">Voltar para Cadastro</a>
-                <a href="/sistema_automoveis/listaautomoveis.php" class="btn btn-primary">Ver Automóveis</a>
+                <a href="/index.php" class="btn btn-success me-2">Voltar para Cadastro</a>
+                <a href="/listaautomoveis.php" class="btn btn-primary">Ver Automóveis</a>
             </div>
         </div>
     </div>

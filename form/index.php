@@ -1,9 +1,9 @@
 <?php
-$host = "localhost";
+$host = "db";
 $user = "root";
 $pass = "root";
 $db   = "concessionaria1";
-$port = 8889;
+$port = 3306;
 
 $conn = new mysqli($host, $user, $pass, $db, $port);
 if ($conn->connect_error) die("Erro na conexão: " . $conn->connect_error);
@@ -26,7 +26,7 @@ $montadoras = $conn->query("SELECT codigo, nome FROM montadoras");
             <h3 class="mb-0">Cadastro de Automóveis</h3>
         </div>
         <div class="card-body">
-            <form method="POST" action="/sistema_automoveis/insere_automovel.php">
+            <form method="POST" action="/insere_automovel.php">
                 <div class="mb-3">
                     <label class="form-label">Nome do Automóvel</label>
                     <input type="text" class="form-control" name="nome" required>
@@ -53,7 +53,7 @@ $montadoras = $conn->query("SELECT codigo, nome FROM montadoras");
                 </div>
 
                 <button type="submit" class="btn btn-success">Cadastrar</button>
-                <a href="/sistema_automoveis/listaautomoveis.php" class="btn btn-primary ms-2">Ver Automóveis</a>
+                <a href="/listaautomoveis.php" class="btn btn-primary ms-2">Ver Automóveis</a>
             </form>
         </div>
     </div>

@@ -1,9 +1,9 @@
 <?php
-$host = "localhost";
+$host = "db";
 $user = "root";
 $pass = "root";
 $db   = "concessionaria1";
-$port = 8889;
+$port = 3306;
 
 $conn = new mysqli($host, $user, $pass, $db, $port);
 if ($conn->connect_error) die("Erro na conexão: " . $conn->connect_error);
@@ -37,13 +37,13 @@ $result = $stmt->get_result();
             <h3 class="mb-0">Lista de Automóveis</h3>
         </div>
         <div class="card-body">
-            <form class="row g-3 mb-4" method="GET" action="/sistema_automoveis/listaautomoveis.php">
+            <form class="row g-3 mb-4" method="GET" action="/listaautomoveis.php">
                 <div class="col-md-8">
                     <input type="text" class="form-control" name="busca" placeholder="Buscar pelo nome do carro" value="<?= htmlspecialchars($busca) ?>">
                 </div>
                 <div class="col-md-4">
                     <button type="submit" class="btn btn-primary">Buscar</button>
-                    <a href="/sistema_automoveis/index.php" class="btn btn-success ms-2">Cadastrar Novo</a>
+                    <a href="/index.php" class="btn btn-success ms-2">Cadastrar Novo</a>
                 </div>
             </form>
 
