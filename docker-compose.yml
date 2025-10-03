@@ -21,7 +21,7 @@ services:
     volumes:
       - db_data:/var/lib/mysql
       - ./form/concessionaria1.sql:/docker-entrypoint-initdb.d/concessionaria1.sql:ro
-      
+
 volumes:
   db_data:
 
@@ -46,12 +46,12 @@ volumes:
 # 		environment:
 # 			POSTGRES_USER: postgres
 # 			POSTGRES_PASSWORD: postgres
-# 			POSTGRES_DB: loja
+# 			POSTGRES_DB: concessionaria1
 # 		ports:
 # 			- "5433:5432"
 # 		volumes:
 # 			- db_data:/var/lib/postgresql/data
-# 			- ./form/loja.sql:/docker-entrypoint-initdb.d/loja.sql:ro
+# 			- ./form/concessionaria1.sql:/docker-entrypoint-initdb.d/concessionaria1.sql:ro
 			
 # volumes:
 # 	db_data:
