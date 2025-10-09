@@ -4,7 +4,7 @@ services:
       context: .
     container_name: php_form
     ports:
-      - "8080:80"
+      - "3001:80"
     volumes:
       - ./form:/var/www/html
     depends_on:
