@@ -57,7 +57,7 @@ $conn->close();
             <?php endif; ?>
             <div class="text-center">
                 <a href="/index.php" class="btn btn-success me-2">Voltar para Cadastro</a>
-                <a href="/listaautomoveis.php" class="btn btn-primary">Ver Automóveis</a>
+                <a href="/listaautomoveis.php" class="btn btn-primary">Lista de Automóveis</a>
             </div>
         </div>
     </div>
